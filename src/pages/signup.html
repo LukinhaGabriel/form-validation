@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoyaBank - Página de Cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/signup.css">
+</head>
+<body>
+    <main>
+        <section class="banner">
+            <h2 class="banner__title">MoyaBank é o primeiro passo para sua liberdade financeira!</h2>
+        </section>
+        <section class="formulario">
+            <div class="formulario__header">
+                <img src="../assets/img/status-1.png" class="formulario__steps" alt="Etapa um de três">
+                <h2 class="formulario__title-text">Preencha os campos abaixo para criar sua conta corrente!</h2>
+            </div>
+            <form action="" class="main__form" data-form>
+                <fieldset class="form__field">
+                    <label for="nome"  class="field__label">Nome e Sobrenome:</label>
+                    <input type="text" id="nome"
+                           name="nome" 
+                           class="field__writing"
+                           minlength="3" required>
+                    <span class="error-message"></span>
+                </fieldset>
+                
+                <fieldset class="form__field">
+                    <label for="email"  class="field__label">E-mail:</label>
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           class="field__writing"
+                           minlength="4" required>
+                    <span class="error-message"></span>
+                </fieldset>
+                
+                <fieldset class="form__field">
+                    <label for="cpf"  class="field__label">CPF: (Apenas Número)</label>
+                    <input type="text" id="cpf" name="cpf"
+                           class="field__writing" 
+                           minlength="11" maxlength="14"
+                           pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" 
+                           required>
+                    <span class="error-message"></span>
+                </fieldset>
+                
+                <fieldset class="form__field">
+                    <label for="birthday"  class="field__label">Data de Nacimento:</label>
+                    <input type="date" 
+                           id="birthday"
+                           name="birthday"
+                           class="field__writing" required>
+                    <span class="error-message"></span>
+                </fieldset>
+
+                
+                <fieldset class="formulario__terms">
+                    <input  type="checkbox" id="terms" name="terms" class="terms__input" required>
+                    <label for="terms" class="terms__text">Li e estou ciente quanto às condições 
+                        de tratamento dos meus dados conforme descrito 
+                        na Política de Privacidade do banco.</label>
+                    <span class="error-message"></span>
+                </fieldset>
+
+                
+                <input type="submit" value="Avançar" class="form__button" id="enviar">
+            </form>
+        </section>
+    </main>
+
+
+    <script type="module" src="../script/script.js"></script>
+</body>
+</html>

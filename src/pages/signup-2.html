@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoyaBank - Página de Cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/signup.css">
+</head>
+<body>
+    <main>
+        <section class="banner">
+            <h2 class="banner__title">MoyaBank é o primeiro passo para sua liberdade financeira!</h2>
+        </section>
+        <section class="formulario">
+            <div class="formulario__header">
+                <img src="../assets/img/status-2.png" class="formulario__steps" alt="Etapa dois de três">
+                <h2 class="formulario__title-text">Clique no quadro abaixo para capturarmos uma imagem sua para o cadastro!</h2>
+            </div>
+            <div class="formulario__camera">
+                <img src="../assets/img/reconhecimento.png" alt="Rosto com olhos e um sorriso dentro de um enquadramento"
+                data-video-botao class="formulario__imagem">
+
+                <div class="camera" data-camera>
+                    <video width="320" height="240" autoplay data-video></video>
+                    <button class='camera__button' data-tirar-foto>Tirar foto</button>
+                </div>
+    
+                <div class="formulario__mensagem" data-mensagem>
+                    <canvas width="320" height="240" data-video-canvas></canvas>
+                    <img src="../assets/img/icone-check.png" alt="Ícone de validação" class="formulario__imagem">
+                    <p>Prontinho, imagem capturada!</p>
+    
+                    <a href="#" 
+                    class="form__button" 
+                    data-enviar>Quero abrir minhaconta!</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <script src="../script/camera.js"></script>
+</body>
+</html>
